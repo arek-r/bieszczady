@@ -1,0 +1,407 @@
+/* Global styles */
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates:300,400,500,600,700,800,800i,900,900i&subset=latin-ext');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body {
+	font-family: 'Montserrat Alternates', sans-serif;
+
+}
+
+header,
+.container,
+.logo,
+.jumbotron,
+.intro,
+.gallery,
+.image,
+.layer,
+.cards,
+.attractions,
+.attractions-layer,
+[class^="item-"],
+footer,
+.logo-footer {
+	display: flex;
+}
+
+.container {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+section > .container {
+	margin: 50px auto;
+}
+
+/* Header, logo, menu */
+header > .container {
+	justify-content: space-between;
+}
+
+header {
+	background: #7D9100;
+	color: #354242;
+	height: auto;
+}
+
+.logo {
+	padding: 5px;
+}
+
+.logo img {
+	height: 50px;
+}
+
+.logo h1 {
+	line-height: inherit;
+	padding: 10px 0;
+	font-style: oblique;
+}
+
+header ul {
+	display: flex;
+	align-items: center;
+}
+
+header ul li {
+	padding: 0 10px;
+	list-style-type: none;
+}
+
+header ul li a {
+	color: #354242;
+	font-weight: bold;
+	text-decoration: none;
+	line-height: 70px;
+}
+
+header ul li:hover {
+	background: #354242;
+	cursor: pointer;
+}
+
+header ul li:hover a {
+	color: #7D9100;
+}
+
+/* Jumbotron */
+.jumbotron {
+	align-items: center;
+	justify-content: center;
+	height: calc(100vh - 60px);
+	background-image: url("http://arekrybka.com/bootcamp/bieszczady/images/jumbotron.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.jumbotron h1 {
+	color: #fff;
+	font-size: 4em;
+	width: 100%;
+	text-align: center;
+	padding: 50px 0;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+/* Intro */
+.intro {
+	height: auto;
+	align-content: center;
+}
+
+.intro > .container {
+	padding: 40px;
+}
+
+.intro h1 {
+	font-size: 3em;
+	align-self: center;
+}
+
+.intro p {
+	padding: 0 1em;
+	line-height: 1.5em;
+	font-size: 1.5em;
+}
+
+/* Gallery */
+.gallery {
+	justify-content: center;
+}
+
+
+.gallery img {
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+	display: block;
+}
+
+.image {
+	position: relative;
+	width: calc(99.1vw / 6);
+}
+
+.layer {
+	position: absolute;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 300px;
+}
+
+.layer h3 {
+	color: #fff;
+	visibility: hidden;
+}
+
+.layer:hover {
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.layer:hover h3 {
+	visibility: visible;
+}
+
+/* Cards */
+.cards {
+	flex-direction: column;
+}
+
+.cards > .container {
+	justify-content: center;
+	margin-bottom: 0;
+}
+
+.cards .container:not(:first-of-type) {
+	justify-content: space-around;
+	flex-flow: row wrap;
+}
+
+.cards .container:last-of-type {
+	margin-bottom: 60px;
+}
+
+.cards h1 {
+	font-size: 3em;
+}
+
+.attractions {
+	position: relative;
+	height: 280px;
+	width: 30%;
+}
+
+.attractions img, .attractions-layer {
+	height: 250px;
+	width: 100%;
+	border-radius: 8px;
+}
+
+.attractions-layer {
+	position: absolute;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: rgba(0, 0, 0, 0.3);
+	color: #fff;
+}
+
+.attractions-layer h3 {
+	font-size: 1.5em;
+	margin-bottom: 2%;
+}
+
+.attractions-layer p {
+	text-align: center;
+	line-height: 1.5em;
+	padding: 0 5%;
+}
+
+/* Footer */
+footer,
+footer > .container,
+.logo-footer {
+	justify-content: center;
+	align-items: center;
+
+}
+
+footer {
+	background: #354242;
+	color: #7D9100;
+	height: auto;
+}
+
+footer > .container {
+	flex-direction: column;
+	padding: 40px 0;
+}
+
+.logo-footer {
+	margin: 0 auto;
+	font-style: oblique;
+}
+
+.logo-footer img {
+	width: 75px;
+}
+
+.logo-footer h1 {
+	padding-top: 20px;
+}
+
+/* Media queries */
+@media (max-width:1199px) {
+	/* Gallery */
+	.gallery {
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+	}
+	.image {
+		width: 33%;
+	}
+	.image img {
+		width: 100%;
+	}
+}
+
+@media (max-width: 1040px) {
+	/* Header, logo, menu */
+	header > .container {
+		justify-content: center;
+		flex-direction: column;
+	}
+	.logo {
+		justify-content: center;
+	}
+	header ul {
+		justify-content: space-around;
+		padding: 0;
+	}
+}
+
+@media (max-width: 991px) {
+	/* Intro */
+	.intro > .container {
+		flex-direction: column;
+		padding: 20px;
+	}
+	.intro h1 {
+		text-align: center;
+	}
+	.intro p {
+		text-align: justify;
+		padding-top: 20px;
+	}
+
+	/* Gallery */
+	.image {
+		flex-direction: column;
+		justify-content: flex-end;
+		width: 50%;
+	}
+
+	.layer {
+		height: 25%;
+		background: rgba(0, 0, 0, 0.5);
+	}
+	.layer h3 {
+		visibility: visible;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	/* Intro */
+	.intro h1 {
+		font-size: 2.5em;
+	}
+	.intro p {
+		font-size: 1.3em;
+	}
+
+	/* Cards */
+	.cards .container:nth-child(odd) {
+		flex-direction: column;
+		align-items: center;
+	}
+	.attractions, .attractions-layer {
+		width: 45vw;
+	}
+}
+
+@media screen and (max-width: 615px) {
+	/* Header, logo, menu */
+	header ul {
+		flex-direction: column;
+		justify-content: center;
+	}
+	header ul li {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	/* Jumbotron */
+	.jumbotron h1 {
+		font-size: 3em;
+	}
+	
+	/* Intro */
+	.intro h1 {
+		font-size: 2.2em;
+	}
+	.intro p {
+		font-size: 1.1em;
+		padding-top: 10px 0;
+	}
+
+	/* Gallery */
+	.image {
+		width: 100vw;
+	}
+
+	/* Cards */
+	.cards > .container {
+		text-align: center;
+	}
+
+	.cards h1 {
+		font-size: 2.2em;
+	}
+	.attractions, .attractions-layer {
+		width: 90vw;
+	}
+}
+
+@media screen and (max-width: 445px) {
+	/* Footer logo */
+	.logo-footer {
+		flex-flow: row wrap;
+		justify-content: center;
+		text-align: center;
+	}
+	.logo-footer h1::before {
+		content: "M";
+	}
+}
+
+@media screen and (max-width: 425px) {
+	/* Header logo */
+	.logo {
+		flex-flow: row wrap;
+		justify-content: center;
+		text-align: center;
+	}
+	.logo h1::before {
+		content: "M";
+	}
+}
